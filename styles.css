@@ -348,3 +348,46 @@ body{min-height:100vh}
 @media(prefers-reduced-motion:reduce){
   .loader-screen{display:none}
 }
+
+
+/* Desktop background extension: keep the central artwork unchanged,
+   but fill the side areas with a blurred continuation of the same visual. */
+@media (min-width: 1025px){
+  body{
+    position:relative;
+    background:#000;
+  }
+
+  body::before{
+    content:"";
+    position:fixed;
+    inset:-40px;
+    z-index:-2;
+    background:
+      linear-gradient(rgba(0,0,0,.34),rgba(0,0,0,.34)),
+      url("assets/design.jpeg") center top / cover no-repeat;
+    filter:blur(28px) brightness(.48) saturate(.72);
+    transform:scale(1.08);
+  }
+
+  body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+    background:
+      radial-gradient(circle at center,transparent 0%,transparent 48%,rgba(0,0,0,.34) 78%,rgba(0,0,0,.72) 100%),
+      linear-gradient(to bottom,rgba(0,0,0,.08),rgba(0,0,0,.38));
+  }
+
+  .site-shell{
+    background:transparent;
+  }
+
+  .design-wrap{
+    box-shadow:
+      0 0 60px rgba(0,0,0,.64),
+      0 0 140px rgba(0,0,0,.38);
+  }
+}
