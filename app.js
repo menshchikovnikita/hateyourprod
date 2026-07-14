@@ -16,7 +16,6 @@ window.addEventListener("load", () => {
   }, 3450);
 });
 
-
 const tg = window.Telegram?.WebApp;
 if (tg) {
   tg.ready();

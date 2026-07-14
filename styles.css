@@ -417,3 +417,4 @@ button,a{font:inherit}
 }
 @media(prefers-reduced-motion:reduce){
   .loader-screen{display:none}
+}
