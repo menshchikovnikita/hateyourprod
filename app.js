@@ -1,3 +1,22 @@
+// Splash animation: HATE YOUR PROD flows into BILLIONAIRES CLUB.
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loaderScreen");
+  if (!loader) return;
+
+  document.body.style.overflow = "hidden";
+
+  window.setTimeout(() => {
+    loader.classList.add("is-hidden");
+    document.body.style.overflow = "";
+
+    window.setTimeout(() => {
+      loader.remove();
+    }, 750);
+  document.body.classList.add('app-ready');
+  }, 3450);
+});
+
+
 const tg = window.Telegram?.WebApp;
 if (tg) {
   tg.ready();
@@ -7,12 +26,6 @@ if (tg) {
     tg.setBackgroundColor("#050505");
   } catch(e) {}
 }
-
-const loader = document.getElementById("loaderScreen");
-window.addEventListener("load", () => {
-  setTimeout(() => loader.classList.add("hide"), 3450);
-  setTimeout(() => loader.remove(), 4200);
-});
 
 document.querySelectorAll(".video-shell").forEach(shell => {
   const button = shell.querySelector(".video-poster");

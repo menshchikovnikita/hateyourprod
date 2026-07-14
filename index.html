@@ -9,11 +9,28 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-  <div class="loader-screen" id="loaderScreen">
+  <div class="loader-screen" id="loaderScreen" aria-hidden="false">
+    <div class="loader-glow loader-glow-a"></div>
+    <div class="loader-glow loader-glow-b"></div>
+
     <div class="loader-stage">
-      <img class="loader-logo logo-hyp" src="assets/loader-hate-your-prod.png" alt="HATE YOUR PROD">
-      <img class="loader-logo logo-bc" src="assets/loader-billionaires-club.jpeg" alt="BILLIONAIRES CLUB">
-      <div class="loader-liquid"></div>
+      <div class="loader-logo loader-logo-hyp">
+        <img src="assets/loader-hate-your-prod.png" alt="HATE YOUR PROD">
+      </div>
+
+      <div class="liquid-bridge" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="loader-logo loader-logo-bc">
+        <img src="assets/loader-billionaires-club.jpeg" alt="BILLIONAIRES CLUB">
+      </div>
+
+      <div class="loader-caption">
+        <span>HATE YOUR PROD</span>
+        <i></i>
+        <span>BILLIONAIRES CLUB</span>
+      </div>
     </div>
   </div>
 
