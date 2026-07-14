@@ -350,59 +350,51 @@ body{min-height:100vh}
 }
 
 
-/* Полноэкранный фон без изменения центрального интерфейса */
-html, body {
-  width: 100%;
-  min-height: 100%;
-  overflow-x: hidden;
-  background: #000;
+/* Desktop: only the side background is extended.
+   The original interface image remains untouched and centered. */
+.desktop-sides-bg{
+  display:none;
 }
 
-.site-shell {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
-  background: #000;
-}
-
-.full-page-background {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 50%;
-  width: max(100vw, 1024px);
-  height: 100%;
-  min-height: 100vh;
-  transform: translateX(-50%);
-  object-fit: cover;
-  object-position: center top;
-  pointer-events: none;
-  user-select: none;
-}
-
-.design-wrap {
-  position: relative;
-  z-index: 2;
-  width: min(100vw, 1024px);
-  flex: 0 0 auto;
-}
-
-/* На телефоне края широкого фона автоматически обрезаются,
-   а сам интерфейс остаётся прежним. */
-@media (max-width: 1024px) {
-  .full-page-background {
-    width: 1920px;
-    left: 50%;
-    transform: translateX(-50%);
-    object-fit: cover;
-    object-position: center top;
+@media (min-width:1025px){
+  html,body{
+    min-height:100%;
+    background:#000;
   }
 
-  .design-wrap {
-    width: 100vw;
+  body{
+    position:relative;
+  }
+
+  .desktop-sides-bg{
+    display:block;
+    position:fixed;
+    inset:0;
+    z-index:0;
+    background:
+      #000 url("assets/desktop-sides.jpeg") center top / cover no-repeat;
+    pointer-events:none;
+  }
+
+  .site-shell{
+    position:relative;
+    z-index:2;
+    background:transparent !important;
+  }
+
+  .design-wrap{
+    width:1024px;
+    max-width:1024px;
+    margin:0 auto;
+    box-shadow:
+      -30px 0 46px rgba(0,0,0,.52),
+      30px 0 46px rgba(0,0,0,.52);
+  }
+}
+
+/* Mobile stays exactly as before. */
+@media (max-width:1024px){
+  .desktop-sides-bg{
+    display:none;
   }
 }
