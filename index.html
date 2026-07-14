@@ -10,23 +10,70 @@
 </head>
 <body>
   <main class="site-shell">
-    <div class="design-wrap" id="designWrap">
+    <div class="design-wrap" id="homeScreen">
       <img src="assets/design.jpeg" alt="HATE YOUR PROD — Логика монтажа" class="design">
 
       <button class="hotspot hs-cta" data-section="intro" aria-label="Я монтирую — ты смотришь"></button>
-
       <button class="hotspot hs-intro" data-section="intro" aria-label="Интро"></button>
       <button class="hotspot hs-theory" data-section="theory" aria-label="Теория"></button>
       <button class="hotspot hs-editing" data-section="editing" aria-label="Монтаж"></button>
       <button class="hotspot hs-materials" data-section="materials" aria-label="Материалы к курсу"></button>
       <button class="hotspot hs-extra" data-section="extra" aria-label="Дополнительные материалы"></button>
 
-      <button class="hotspot nav-home" data-scroll="top" aria-label="Главная"></button>
-      <button class="hotspot nav-sections" data-scroll="sections" aria-label="Разделы"></button>
+      <button class="hotspot nav-home" data-action="home" aria-label="Главная"></button>
+      <button class="hotspot nav-sections" data-action="sections" aria-label="Разделы"></button>
       <button class="hotspot nav-materials" data-section="materials" aria-label="Материалы"></button>
       <button class="hotspot nav-info" data-section="info" aria-label="Информация"></button>
     </div>
   </main>
+
+  <section class="app-screen" id="sectionScreen" aria-hidden="true">
+    <header class="app-header">
+      <button class="round-btn" id="backHome">←</button>
+      <div>
+        <span id="sectionKicker">РАЗДЕЛ</span>
+        <strong id="sectionTitle">ИНТРО</strong>
+      </div>
+    </header>
+    <div class="app-content">
+      <div class="section-hero">
+        <div class="section-index" id="sectionIndex">01</div>
+        <h1 id="sectionHeading">ИНТРО</h1>
+        <p id="sectionDescription"></p>
+      </div>
+      <div class="lesson-list" id="lessonList"></div>
+    </div>
+  </section>
+
+  <section class="app-screen" id="lessonScreen" aria-hidden="true">
+    <header class="app-header">
+      <button class="round-btn" id="backSection">←</button>
+      <div>
+        <span id="lessonSectionLabel">РАЗДЕЛ</span>
+        <strong id="lessonHeaderTitle">УРОК</strong>
+      </div>
+    </header>
+
+    <div class="lesson-page">
+      <div class="video-frame">
+        <iframe id="lessonVideo" src="" title="Видео урока"
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="lesson-meta">
+        <span class="lesson-kicker" id="lessonKicker">УРОК 01</span>
+        <h1 id="lessonTitle">Название урока</h1>
+        <p id="lessonDescription">Видео курса «Логика монтажа».</p>
+        <a id="openExternal" class="secondary-link" href="#" target="_blank" rel="noopener">Открыть видео отдельно ↗</a>
+      </div>
+
+      <div class="lesson-navigation">
+        <button id="prevLesson">← ПРЕДЫДУЩИЙ</button>
+        <button id="nextLesson">СЛЕДУЮЩИЙ →</button>
+      </div>
+    </div>
+  </section>
 
   <div class="modal" id="modal" aria-hidden="true">
     <div class="modal-card">
@@ -34,7 +81,6 @@
       <div class="kicker" id="kicker">РАЗДЕЛ</div>
       <h2 id="title">Название</h2>
       <p id="text"></p>
-      <div id="items"></div>
     </div>
   </div>
 
