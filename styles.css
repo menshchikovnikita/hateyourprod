@@ -349,10 +349,7 @@ body{min-height:100vh}
   .loader-screen{display:none}
 }
 
-/* Visible desktop background extension */
-.desktop-background{
-  display:none;
-}
+.desktop-background-real{display:none}
 
 @media (min-width:1025px){
   html,body{
@@ -360,40 +357,13 @@ body{min-height:100vh}
     background:#000;
   }
 
-  body{
-    position:relative;
-  }
-
-  .desktop-background{
+  .desktop-background-real{
     display:block;
     position:fixed;
     inset:0;
     z-index:0;
-    overflow:hidden;
-    background:#050505;
-  }
-
-  .desktop-background::before{
-    content:"";
-    position:absolute;
-    inset:-90px;
     background:
-      linear-gradient(rgba(0,0,0,.20),rgba(0,0,0,.28)),
-      url("assets/design.jpeg") center top / cover no-repeat;
-    filter:blur(38px) brightness(.72) contrast(1.08);
-    transform:scale(1.15);
-  }
-
-  .desktop-background::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-      radial-gradient(circle at center,
-        rgba(0,0,0,0) 0%,
-        rgba(0,0,0,.08) 48%,
-        rgba(0,0,0,.44) 82%,
-        rgba(0,0,0,.68) 100%);
+      #000 url("assets/desktop-background.jpeg") center top / 100% auto no-repeat;
   }
 
   .site-shell{
@@ -404,7 +374,7 @@ body{min-height:100vh}
 
   .design-wrap{
     box-shadow:
-      0 0 70px rgba(0,0,0,.75),
-      0 0 180px rgba(0,0,0,.45);
+      -22px 0 36px rgba(0,0,0,.30),
+      22px 0 36px rgba(0,0,0,.30);
   }
 }
