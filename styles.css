@@ -107,3 +107,16 @@ body{min-height:100vh}
   .modal-card{padding:28px 20px;margin-top:4vh}
   .modal-card h2{font-size:30px}
 }
+
+.hs-telegram-link{
+ left:86.4%;
+ top:1.6%;
+ width:5.5%;
+ height:5.5%;
+}
+.hs-instagram-link{
+ left:92.4%;
+ top:1.6%;
+ width:5.8%;
+ height:5.8%;
+}
