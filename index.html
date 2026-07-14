@@ -2,67 +2,42 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#050505">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
   <title>Логика монтажа — HATE YOUR PROD</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-  <div class="noise"></div>
-  <header class="topbar">
-    <img src="assets/hate-your-prod.png" class="brand" alt="HATE YOUR PROD">
-    <div class="top-icons"><button>↗</button><button>◉</button></div>
-  </header>
+  <main class="site-shell">
+    <div class="design-wrap" id="designWrap">
+      <img src="assets/design.jpeg" alt="HATE YOUR PROD — Логика монтажа" class="design">
 
-  <main>
-    <section class="hero" id="top">
-      <div class="hero-copy">
-        <div class="chrome-logo"><img src="assets/billionaires-club.jpeg" alt="Billionaires Club"></div>
-        <div class="micro">ЛОГИКА МОНТАЖА</div>
-        <h1>Монтаж как мышление, ритм и вкус.</h1>
-        <p>Практический курс без модулей и лишней теории. Всё собрано по логике реального монтажного процесса.</p>
-        <button class="statement" id="goSections"><span>✦</span><b>Я МОНТИРУЮ<br><small>ТЫ СМОТРИШЬ</small></b><i>↗</i></button>
-      </div>
-      <div class="hero-photo">
-        <img src="assets/author.jpeg" alt="Автор курса">
-        <span>HATE YOUR PROD / 2026</span>
-      </div>
-    </section>
+      <button class="hotspot hs-cta" data-section="intro" aria-label="Я монтирую — ты смотришь"></button>
 
-    <section class="sections" id="sections">
-      <div class="section-head"><div><small>CONTENT MAP</small><h2>РАЗДЕЛЫ</h2></div><span>ВЕСЬ КУРС ПО ШАГАМ →</span></div>
-      <div class="grid">
-        <button class="card" data-id="intro"><em>01</em><div class="symbol">✦</div><b>ИНТРО</b><small>СТАРТ КУРСА</small><i>↗</i></button>
-        <button class="card" data-id="theory"><em>02</em><div class="symbol">∞</div><b>ТЕОРИЯ</b><small>РАЗБОР И ПОДХОДЫ</small><i>↗</i></button>
-        <button class="card" data-id="editing"><em>03</em><div class="symbol">＋</div><b>МОНТАЖ</b><small>ПРАКТИКА И ПРОЦЕСС</small><i>↗</i></button>
-        <button class="card wide" data-id="materials"><em>04</em><div class="symbol">▰</div><b>МАТЕРИАЛЫ К КУРСУ</b><small>ФАЙЛЫ И РЕСУРСЫ</small><i>↗</i></button>
-        <button class="card wide" data-id="extra"><em>05</em><div class="symbol">◉</div><b>ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ</b><small>БОНУСЫ И ПОЛЕЗНОЕ</small><i>↗</i></button>
-      </div>
-    </section>
+      <button class="hotspot hs-intro" data-section="intro" aria-label="Интро"></button>
+      <button class="hotspot hs-theory" data-section="theory" aria-label="Теория"></button>
+      <button class="hotspot hs-editing" data-section="editing" aria-label="Монтаж"></button>
+      <button class="hotspot hs-materials" data-section="materials" aria-label="Материалы к курсу"></button>
+      <button class="hotspot hs-extra" data-section="extra" aria-label="Дополнительные материалы"></button>
 
-    <section class="quote"><strong>“</strong><p>МОНТАЖ — ЭТО НЕ ПРО КНОПКИ.<br>ЭТО ПРО МЫШЛЕНИЕ, РИТМ И ВКУС.</p><span>✦</span></section>
+      <button class="hotspot nav-home" data-scroll="top" aria-label="Главная"></button>
+      <button class="hotspot nav-sections" data-scroll="sections" aria-label="Разделы"></button>
+      <button class="hotspot nav-materials" data-section="materials" aria-label="Материалы"></button>
+      <button class="hotspot nav-info" data-section="info" aria-label="Информация"></button>
+    </div>
   </main>
 
-  <nav class="bottom">
-    <button data-scroll="#top" class="active">✦<small>ГЛАВНАЯ</small></button>
-    <button data-scroll="#sections">▷<small>РАЗДЕЛЫ</small></button>
-    <button id="materialsBtn">▱<small>МАТЕРИАЛЫ</small></button>
-    <button id="infoBtn">ⓘ<small>ИНФО</small></button>
-  </nav>
-
-  <div class="modal" id="modal">
+  <div class="modal" id="modal" aria-hidden="true">
     <div class="modal-card">
       <button class="close" id="close">×</button>
-      <small id="kicker">РАЗДЕЛ</small>
-      <h2 id="title"></h2>
+      <div class="kicker" id="kicker">РАЗДЕЛ</div>
+      <h2 id="title">Название</h2>
       <p id="text"></p>
       <div id="items"></div>
     </div>
   </div>
+
   <script src="app.js"></script>
 </body>
 </html>
