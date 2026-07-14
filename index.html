@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>BILLIONAIRES CLUB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">PRIVATE EDUCATION PLATFORM</div>
+      <h1>BILLIONAIRES CLUB</h1>
+    </div>
+    <button class="profile" id="profileBtn" aria-label="Профиль">
+      <span id="avatarLetter">B</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero glass">
+      <div>
+        <div class="status"><span></span> ДОСТУП АКТИВЕН</div>
+        <h2>Курс по монтажу</h2>
+        <p>Уроки, материалы и домашние задания в одном месте.</p>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>Прогресс</span>
+          <strong id="progressText">0%</strong>
+        </div>
+        <div class="progress-bar"><div id="progressFill"></div></div>
+      </div>
+    </section>
+
+    <section class="section-head">
+      <div>
+        <div class="eyebrow">PROGRAM</div>
+        <h3>Модули курса</h3>
+      </div>
+      <span class="count" id="lessonsCount">0 уроков</span>
+    </section>
+
+    <section id="modules" class="modules"></section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-target="modules">
+      <span>◼</span>
+      <small>Уроки</small>
+    </button>
+    <button class="nav-item" id="materialsBtn">
+      <span>＋</span>
+      <small>Материалы</small>
+    </button>
+    <button class="nav-item" id="chatBtn">
+      <span>✦</span>
+      <small>Чат</small>
+    </button>
+  </nav>
+
+  <div class="modal" id="lessonModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" id="closeModal">×</button>
+      <div class="video-shell" id="videoShell">
+        <div class="video-placeholder">
+          <div class="play">▶</div>
+          <p>Вставь сюда Kinescope-плеер</p>
+        </div>
+      </div>
+      <div class="lesson-content">
+        <div class="eyebrow" id="modalModule">МОДУЛЬ</div>
+        <h2 id="modalTitle">Название урока</h2>
+        <p id="modalDescription"></p>
+        <button class="primary" id="completeBtn">Отметить урок пройденным</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
