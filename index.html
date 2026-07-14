@@ -37,19 +37,72 @@
   </div>
 
   <main class="site-shell">
-    <div class="design-wrap" id="homeScreen">
-      <img src="assets/design.jpeg" alt="HATE YOUR PROD — Логика монтажа" class="design">
-      <button class="hotspot hs-telegram-link" onclick="window.open('https://t.me/+858ivcj3AYg3MmMy','_blank')" aria-label="Telegram чат"></button>
-      <button class="hotspot hs-instagram-link" id="openProfile" aria-label="Профиль"></button>
+    <section class="new-home" id="homeScreen">
+      <div class="new-home-hero">
+        <img src="assets/home-hero.jpeg" alt="HATE YOUR PROD — Логика монтажа">
+        <button class="hero-link hero-telegram" onclick="window.open('https://t.me/+858ivcj3AYg3MmMy','_blank')" aria-label="Telegram чат"></button>
+        <button class="hero-link hero-profile" id="openProfile" aria-label="Профиль"></button>
+        <button class="hero-link hero-cta" data-section="intro" aria-label="Я монтирую — ты смотришь"></button>
+      </div>
 
+      <div class="new-home-content">
+        <div class="new-home-heading">
+          <div>
+            <span>CONTENT MAP</span>
+            <h2>РАЗДЕЛЫ</h2>
+          </div>
+          <p>ВЕСЬ КУРС ПО ШАГАМ</p>
+        </div>
 
-      <button class="hotspot hs-cta" data-section="intro" aria-label="Я монтирую — ты смотришь"></button>
-      <button class="hotspot hs-intro" data-section="intro" aria-label="Интро"></button>
-      <button class="hotspot hs-theory" data-section="theory" aria-label="Теория"></button>
-      <button class="hotspot hs-editing" data-section="editing" aria-label="Монтаж"></button>
-      <button class="hotspot hs-materials" data-section="materials" aria-label="Материалы к курсу"></button>
-      <button class="hotspot hs-extra" data-section="extra" aria-label="Дополнительные материалы"></button>
-    </div>
+        <div class="new-home-grid">
+          <button class="new-section-card" data-section="intro">
+            <span class="card-index">01</span>
+            <span class="card-rule"></span>
+            <strong>ИНТРО</strong>
+            <small>СТАРТ КУРСА</small>
+            <i>↗</i>
+          </button>
+
+          <button class="new-section-card" data-section="theory">
+            <span class="card-index">02</span>
+            <span class="card-rule"></span>
+            <strong>ТЕОРИЯ</strong>
+            <small>РАЗБОР И ПОДХОДЫ</small>
+            <i>↗</i>
+          </button>
+
+          <button class="new-section-card" data-section="editing">
+            <span class="card-index">03</span>
+            <span class="card-rule"></span>
+            <strong>МОНТАЖ</strong>
+            <small>ПРАКТИКА И ПРОЦЕСС</small>
+            <i>↗</i>
+          </button>
+
+          <button class="new-section-card wide" data-section="materials">
+            <span class="card-index">04</span>
+            <span class="card-rule"></span>
+            <strong>МАТЕРИАЛЫ К КУРСУ</strong>
+            <small>ФАЙЛЫ И РЕСУРСЫ</small>
+            <i>↗</i>
+          </button>
+
+          <button class="new-section-card wide" data-section="extra">
+            <span class="card-index">05</span>
+            <span class="card-rule"></span>
+            <strong>ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ</strong>
+            <small>БОНУСЫ И ПОЛЕЗНОЕ</small>
+            <i>↗</i>
+          </button>
+        </div>
+
+        <div class="new-home-quote">
+          <span>“</span>
+          <p>МОНТАЖ — ЭТО НЕ ПРО КНОПКИ.</p>
+          <span>”</span>
+        </div>
+      </div>
+    </section>
   </main>
 
   <section class="app-screen" id="sectionScreen" aria-hidden="true">
