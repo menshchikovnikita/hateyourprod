@@ -808,115 +808,8 @@ body.app-ready .site-shell{
 }
 
 
-/* ===== ICON / CARD HOVER ANIMATIONS ===== */
+/* ===== LESSON SCREEN HOVER ANIMATIONS ===== */
 
-/* All clickable areas on the illustrated home screen */
-.hotspot{
-  transition:
-    transform .24s cubic-bezier(.22,.75,.18,1),
-    filter .24s ease;
-  transform-origin:center;
-  will-change:transform;
-}
-
-/* Soft lift for section cards and CTA */
-.hs-cta:hover,
-.hs-intro:hover,
-.hs-theory:hover,
-.hs-editing:hover,
-.hs-materials:hover,
-.hs-extra:hover{
-  transform:translateY(-4px) scale(1.012);
-  filter:drop-shadow(0 10px 18px rgba(255,255,255,.10));
-}
-
-/* Chrome glint overlay on cards */
-.hs-cta::before,
-.hs-intro::before,
-.hs-theory::before,
-.hs-editing::before,
-.hs-materials::before,
-.hs-extra::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:18px;
-  overflow:hidden;
-  background:
-    linear-gradient(
-      115deg,
-      transparent 0%,
-      transparent 37%,
-      rgba(255,255,255,.06) 44%,
-      rgba(255,255,255,.34) 49%,
-      rgba(255,255,255,.08) 54%,
-      transparent 62%,
-      transparent 100%
-    );
-  background-size:240% 100%;
-  background-position:135% 0;
-  opacity:0;
-  pointer-events:none;
-  transition:
-    opacity .18s ease,
-    background-position .72s cubic-bezier(.18,.75,.18,1);
-}
-
-.hs-cta:hover::before,
-.hs-intro:hover::before,
-.hs-theory:hover::before,
-.hs-editing:hover::before,
-.hs-materials:hover::before,
-.hs-extra:hover::before{
-  opacity:1;
-  background-position:-40% 0;
-}
-
-/* Top Telegram / Profile icons */
-.hs-telegram-link,
-.hs-instagram-link{
-  border-radius:50%;
-}
-
-.hs-telegram-link::before,
-.hs-instagram-link::before{
-  content:"";
-  position:absolute;
-  inset:-5px;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,0);
-  background:
-    radial-gradient(circle at 34% 26%, rgba(255,255,255,.42), transparent 18%),
-    conic-gradient(
-      from 220deg,
-      transparent,
-      rgba(255,255,255,.18),
-      rgba(255,255,255,.5),
-      rgba(255,255,255,.10),
-      transparent
-    );
-  opacity:0;
-  pointer-events:none;
-  transition:
-    opacity .22s ease,
-    transform .48s cubic-bezier(.22,.75,.18,1),
-    border-color .22s ease;
-}
-
-.hs-telegram-link:hover,
-.hs-instagram-link:hover{
-  transform:translateY(-4px) scale(1.08);
-  filter:drop-shadow(0 8px 12px rgba(255,255,255,.20));
-}
-
-.hs-telegram-link:hover::before,
-.hs-instagram-link:hover::before{
-  opacity:.85;
-  transform:rotate(24deg);
-  border-color:rgba(255,255,255,.24);
-}
-
-/* Lesson list icons / arrows */
 .lesson-num,
 .lesson-arrow,
 .complete-icon,
@@ -943,19 +836,4 @@ body.app-ready .site-shell{
 .complete-lesson:hover .complete-icon{
   transform:translateY(-3px) scale(1.06);
   filter:drop-shadow(0 7px 11px rgba(255,255,255,.18));
-}
-
-/* Touch devices: keep tap response but disable hover-only effects */
-@media (hover:none){
-  .hs-cta:hover,
-  .hs-intro:hover,
-  .hs-theory:hover,
-  .hs-editing:hover,
-  .hs-materials:hover,
-  .hs-extra:hover,
-  .hs-telegram-link:hover,
-  .hs-instagram-link:hover{
-    transform:none;
-    filter:none;
-  }
 }

@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
       loader.remove();
     }, 750);
   document.body.classList.add('app-ready');
-  }, 2400);
+  }, 3450);
 });
 
 const tg = window.Telegram?.WebApp;
