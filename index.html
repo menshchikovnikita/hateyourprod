@@ -1,89 +1,68 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <title>BILLIONAIRES CLUB</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050505">
+  <title>Логика монтажа — HATE YOUR PROD</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
   <div class="noise"></div>
-
   <header class="topbar">
-    <div>
-      <div class="eyebrow">PRIVATE EDUCATION PLATFORM</div>
-      <h1>BILLIONAIRES CLUB</h1>
-    </div>
-    <button class="profile" id="profileBtn" aria-label="Профиль">
-      <span id="avatarLetter">B</span>
-    </button>
+    <img src="assets/hate-your-prod.png" class="brand" alt="HATE YOUR PROD">
+    <div class="top-icons"><button>↗</button><button>◉</button></div>
   </header>
 
   <main>
-    <section class="hero glass">
-      <div>
-        <div class="status"><span></span> ДОСТУП АКТИВЕН</div>
-        <h2>Курс по монтажу</h2>
-        <p>Уроки, материалы и домашние задания в одном месте.</p>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="chrome-logo"><img src="assets/billionaires-club.jpeg" alt="Billionaires Club"></div>
+        <div class="micro">ЛОГИКА МОНТАЖА</div>
+        <h1>Монтаж как мышление, ритм и вкус.</h1>
+        <p>Практический курс без модулей и лишней теории. Всё собрано по логике реального монтажного процесса.</p>
+        <button class="statement" id="goSections"><span>✦</span><b>Я МОНТИРУЮ<br><small>ТЫ СМОТРИШЬ</small></b><i>↗</i></button>
       </div>
-      <div class="progress-wrap">
-        <div class="progress-label">
-          <span>Прогресс</span>
-          <strong id="progressText">0%</strong>
-        </div>
-        <div class="progress-bar"><div id="progressFill"></div></div>
+      <div class="hero-photo">
+        <img src="assets/author.jpeg" alt="Автор курса">
+        <span>HATE YOUR PROD / 2026</span>
       </div>
     </section>
 
-    <section class="section-head">
-      <div>
-        <div class="eyebrow">PROGRAM</div>
-        <h3>Модули курса</h3>
+    <section class="sections" id="sections">
+      <div class="section-head"><div><small>CONTENT MAP</small><h2>РАЗДЕЛЫ</h2></div><span>ВЕСЬ КУРС ПО ШАГАМ →</span></div>
+      <div class="grid">
+        <button class="card" data-id="intro"><em>01</em><div class="symbol">✦</div><b>ИНТРО</b><small>СТАРТ КУРСА</small><i>↗</i></button>
+        <button class="card" data-id="theory"><em>02</em><div class="symbol">∞</div><b>ТЕОРИЯ</b><small>РАЗБОР И ПОДХОДЫ</small><i>↗</i></button>
+        <button class="card" data-id="editing"><em>03</em><div class="symbol">＋</div><b>МОНТАЖ</b><small>ПРАКТИКА И ПРОЦЕСС</small><i>↗</i></button>
+        <button class="card wide" data-id="materials"><em>04</em><div class="symbol">▰</div><b>МАТЕРИАЛЫ К КУРСУ</b><small>ФАЙЛЫ И РЕСУРСЫ</small><i>↗</i></button>
+        <button class="card wide" data-id="extra"><em>05</em><div class="symbol">◉</div><b>ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ</b><small>БОНУСЫ И ПОЛЕЗНОЕ</small><i>↗</i></button>
       </div>
-      <span class="count" id="lessonsCount">0 уроков</span>
     </section>
 
-    <section id="modules" class="modules"></section>
+    <section class="quote"><strong>“</strong><p>МОНТАЖ — ЭТО НЕ ПРО КНОПКИ.<br>ЭТО ПРО МЫШЛЕНИЕ, РИТМ И ВКУС.</p><span>✦</span></section>
   </main>
 
-  <nav class="bottom-nav">
-    <button class="nav-item active" data-target="modules">
-      <span>◼</span>
-      <small>Уроки</small>
-    </button>
-    <button class="nav-item" id="materialsBtn">
-      <span>＋</span>
-      <small>Материалы</small>
-    </button>
-    <button class="nav-item" id="chatBtn">
-      <span>✦</span>
-      <small>Чат</small>
-    </button>
+  <nav class="bottom">
+    <button data-scroll="#top" class="active">✦<small>ГЛАВНАЯ</small></button>
+    <button data-scroll="#sections">▷<small>РАЗДЕЛЫ</small></button>
+    <button id="materialsBtn">▱<small>МАТЕРИАЛЫ</small></button>
+    <button id="infoBtn">ⓘ<small>ИНФО</small></button>
   </nav>
 
-  <div class="modal" id="lessonModal" aria-hidden="true">
+  <div class="modal" id="modal">
     <div class="modal-card">
-      <button class="close" id="closeModal">×</button>
-      <div class="video-shell" id="videoShell">
-        <div class="video-placeholder">
-          <div class="play">▶</div>
-          <p>Вставь сюда Kinescope-плеер</p>
-        </div>
-      </div>
-      <div class="lesson-content">
-        <div class="eyebrow" id="modalModule">МОДУЛЬ</div>
-        <h2 id="modalTitle">Название урока</h2>
-        <p id="modalDescription"></p>
-        <button class="primary" id="completeBtn">Отметить урок пройденным</button>
-      </div>
+      <button class="close" id="close">×</button>
+      <small id="kicker">РАЗДЕЛ</small>
+      <h2 id="title"></h2>
+      <p id="text"></p>
+      <div id="items"></div>
     </div>
   </div>
-
   <script src="app.js"></script>
 </body>
 </html>
