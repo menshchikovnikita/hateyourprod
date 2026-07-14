@@ -172,7 +172,6 @@ button,a{font:inherit}
 }
 .course-footer p{margin:0;color:#b7b9bd;font-size:12px;letter-spacing:.25em}
 .course-footer a{color:#85888f;text-decoration:none}
-52%,67%{opacity:.8;transform:scaleX(1)}90%,100%{opacity:0;transform:scaleX(1.25)}}
 @media(max-width:1024px){
   .course-page{width:100vw;margin:0;border:0;border-radius:0;box-shadow:none}
   .page-background{display:none}
@@ -211,6 +210,25 @@ button,a{font:inherit}
   opacity:0;
   visibility:hidden;
   pointer-events:none;
+}
+
+.access-denied-screen{
+  position:fixed;
+  inset:0;
+  z-index:10000;
+  display:none;
+  place-items:center;
+  background:#000;
+  color:#f3f3f4;
+}
+.access-denied-screen.is-visible{
+  display:grid;
+}
+.access-denied-screen p{
+  margin:0;
+  font-size:15px;
+  letter-spacing:.08em;
+  color:#9a9ca2;
 }
 .loader-screen:before{
   content:"";

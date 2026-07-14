@@ -7,6 +7,7 @@
   <title>Логика монтажа — BILLIONAIRES CLUB</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
   <div class="loader-screen" id="loaderScreen" aria-hidden="false">
@@ -32,6 +33,10 @@
         <span>BILLIONAIRES CLUB</span>
       </div>
     </div>
+  </div>
+
+  <div class="access-denied-screen" id="accessDeniedScreen" aria-hidden="true">
+    <p>Доступ закрыт</p>
   </div>
 
   <div class="page-background" aria-hidden="true"></div>
@@ -171,8 +176,6 @@
           <strong>Дополнительные материалы</strong>
           <small>Открыть Яндекс Диск →</small>
         </a>
-      </div>
-        <div class="material-card"><span>02</span><strong>Дополнительные материалы</strong><small>Ссылки добавим позже</small></div>
       </div>
     </section>
 
