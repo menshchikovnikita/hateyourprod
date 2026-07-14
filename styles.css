@@ -350,55 +350,30 @@ body{min-height:100vh}
 }
 
 
-/* ===== DESKTOP FLOATING PANEL / FIXED GRADIENT SIDES ===== */
+/* Exact side background from the supplied reference */
+.exact-side-background{
+  display:none;
+}
 
 @media (min-width:1025px){
-  html{
-    background:#050506;
+  html,body{
+    min-height:100%;
+    background:#050507;
   }
 
   body{
-    min-height:100%;
-    background:
-      radial-gradient(circle at 12% 28%, rgba(92,96,108,.22) 0%, rgba(35,37,43,.16) 23%, rgba(8,8,10,0) 48%),
-      radial-gradient(circle at 88% 30%, rgba(96,100,112,.20) 0%, rgba(35,37,43,.15) 24%, rgba(8,8,10,0) 50%),
-      linear-gradient(90deg,
-        #060607 0%,
-        #17181c 16%,
-        #08090b 32%,
-        #030303 50%,
-        #08090b 68%,
-        #17181c 84%,
-        #060607 100%);
-    background-attachment:fixed;
     overflow-x:hidden;
   }
 
-  /* subtle side texture without repeating the interface */
-  body::before{
-    content:"";
+  .exact-side-background{
+    display:block;
     position:fixed;
     inset:0;
     z-index:0;
-    pointer-events:none;
     background:
-      radial-gradient(ellipse at 8% 52%, rgba(255,255,255,.045), transparent 34%),
-      radial-gradient(ellipse at 92% 55%, rgba(255,255,255,.04), transparent 35%),
-      linear-gradient(90deg,
-        rgba(255,255,255,.015),
-        transparent 18%,
-        transparent 82%,
-        rgba(255,255,255,.015));
-  }
-
-  body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:0;
+      #050507 url("assets/side-background-exact.jpeg")
+      center top / cover no-repeat;
     pointer-events:none;
-    background:
-      radial-gradient(circle at center, transparent 0%, transparent 50%, rgba(0,0,0,.34) 78%, rgba(0,0,0,.68) 100%);
   }
 
   .site-shell{
@@ -415,37 +390,23 @@ body{min-height:100vh}
   .design-wrap{
     width:min(1024px, calc(100vw - 120px));
     max-width:1024px;
+    margin:0 auto;
     border-radius:20px;
     overflow:hidden;
-    background:#000;
     border:1px solid rgba(255,255,255,.16);
+    background:#000;
     box-shadow:
-      0 30px 90px rgba(0,0,0,.72),
-      0 0 0 1px rgba(255,255,255,.025) inset,
-      0 0 42px rgba(255,255,255,.07);
-    transform:translateZ(0);
-  }
-
-  .design-wrap::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    border-radius:20px;
-    box-shadow:
-      inset 0 0 36px rgba(255,255,255,.035),
-      inset 0 0 0 1px rgba(255,255,255,.03);
-  }
-
-  .design{
-    display:block;
-    width:100%;
-    height:auto;
+      0 34px 95px rgba(0,0,0,.78),
+      0 0 42px rgba(255,255,255,.08),
+      inset 0 0 0 1px rgba(255,255,255,.025);
   }
 }
 
-/* Mobile/tablet stays exactly as before */
 @media (max-width:1024px){
+  .exact-side-background{
+    display:none;
+  }
+
   .site-shell{
     padding:0;
   }
