@@ -40,7 +40,7 @@
     <div class="design-wrap" id="homeScreen">
       <img src="assets/design.jpeg" alt="HATE YOUR PROD — Логика монтажа" class="design">
       <button class="hotspot hs-telegram-link" onclick="window.open('https://t.me/+858ivcj3AYg3MmMy','_blank')" aria-label="Telegram чат"></button>
-      <button class="hotspot hs-instagram-link" onclick="window.open('https://instagram.com/hate.your.prod','_blank')" aria-label="Instagram"></button>
+      <button class="hotspot hs-instagram-link" id="openProfile" aria-label="Профиль"></button>
 
 
       <button class="hotspot hs-cta" data-section="intro" aria-label="Я монтирую — ты смотришь"></button>
@@ -61,12 +61,26 @@
       </div>
     </header>
     <div class="app-content">
-      <div class="section-hero">
+      <div class="section-hero reveal">
         <div class="section-index" id="sectionIndex">01</div>
         <h1 id="sectionHeading">ИНТРО</h1>
         <p id="sectionDescription"></p>
+
+        <div class="section-progress" id="sectionProgress">
+          <div class="progress-copy">
+            <span>ПРОГРЕСС РАЗДЕЛА</span>
+            <strong id="sectionProgressText">0 из 0</strong>
+          </div>
+          <div class="progress-track"><i id="sectionProgressBar"></i></div>
+        </div>
       </div>
-      <div class="lesson-list" id="lessonList"></div>
+
+      <label class="lesson-search reveal">
+        <span>⌕</span>
+        <input id="lessonSearch" type="search" placeholder="Найти урок" autocomplete="off">
+      </label>
+
+      <div class="lesson-list reveal" id="lessonList"></div>
     </div>
   </section>
 
@@ -81,7 +95,12 @@
 
     <div class="lesson-page">
       <div class="video-frame">
+        <div class="video-loader" id="videoLoader">
+          <span></span>
+          <small>ЗАГРУЗКА ВИДЕО</small>
+        </div>
         <iframe id="lessonVideo" src="" title="Видео урока"
+          loading="lazy"
           allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
           allowfullscreen></iframe>
       </div>
@@ -90,7 +109,10 @@
         <span class="lesson-kicker" id="lessonKicker">УРОК 01</span>
         <h1 id="lessonTitle">Название урока</h1>
         <p id="lessonDescription">Видео курса «Логика монтажа».</p>
-        <a id="openExternal" class="secondary-link" href="#" target="_blank" rel="noopener">Открыть видео отдельно ↗</a>
+        <button id="completeLesson" class="complete-lesson" type="button">
+          <span class="complete-icon">✓</span>
+          <span class="complete-label">ОТМЕТИТЬ ПРОЙДЕННЫМ</span>
+        </button>
       </div>
 
       <div class="lesson-navigation">
@@ -99,6 +121,19 @@
       </div>
     </div>
   </section>
+
+  <aside class="profile-panel" id="profilePanel" aria-hidden="true">
+    <button class="profile-close" id="closeProfile" aria-label="Закрыть">×</button>
+    <span class="profile-kicker">BILLIONAIRES CLUB</span>
+    <h2>ЛОГИКА МОНТАЖА</h2>
+    <div class="overall-progress">
+      <div><span>ОБЩИЙ ПРОГРЕСС</span><strong id="overallProgressText">0%</strong></div>
+      <div class="progress-track"><i id="overallProgressBar"></i></div>
+    </div>
+    <a href="https://instagram.com/hate.your.prod" target="_blank" rel="noopener">Instagram <span>↗</span></a>
+    <a href="https://t.me/+858ivcj3AYg3MmMy" target="_blank" rel="noopener">Чат курса <span>↗</span></a>
+  </aside>
+  <div class="profile-backdrop" id="profileBackdrop"></div>
 
   <div class="modal" id="modal" aria-hidden="true">
     <div class="modal-card">
