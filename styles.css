@@ -371,7 +371,7 @@ body{min-height:100vh}
     inset:0;
     z-index:0;
     background:
-      #050507 url("assets/side-background-exact.jpeg")
+      #050507 url("assets/side-background-gradient-noise.png")
       center top / cover no-repeat;
     pointer-events:none;
   }
