@@ -1,15 +1,10 @@
-# HATE YOUR PROD — BILLIONAIRES CLUB top logo
+# HATE YOUR PROD — восстановленная версия
 
-Изменено:
-- верхняя надпись HATEYOURPROD визуально закрыта;
-- вместо неё добавлена надпись BILLIONAIRES CLUB;
-- надпись выполнена в liquid-metal / chrome стиле;
-- остальные функции сайта, видео, загрузочный экран и социальные кнопки сохранены.
+Верхняя надпись снова HATEYOURPROD, как в исходном дизайне.
+Сохранены:
+- загрузочный экран;
+- видео и разделы;
+- ссылки на Instagram и Telegram;
+- версия без нижнего меню.
 
-Для обновления замените в GitHub:
-- index.html
-- styles.css
-- app.js
-- папку assets
-
-После Commit changes Vercel обновится автоматически.
+Замените в GitHub все файлы и папку assets, затем нажмите Commit changes.
