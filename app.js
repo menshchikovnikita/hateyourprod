@@ -164,15 +164,6 @@ document.querySelectorAll("[data-section]").forEach(el => {
   el.addEventListener("click", () => openSection(el.dataset.section));
 });
 
-document.querySelectorAll("[data-action]").forEach(el => {
-  el.addEventListener("click", () => {
-    if (el.dataset.action === "sections") {
-      window.scrollTo({top: document.body.scrollHeight * 0.45, behavior:"smooth"});
-    } else {
-      window.scrollTo({top:0, behavior:"smooth"});
-    }
-  });
-});
 
 document.getElementById("backHome").addEventListener("click", () => {
   sectionScreen.classList.remove("show");

@@ -7,15 +7,15 @@ body{min-height:100vh}
 .hotspot{position:absolute;border:0;background:transparent;cursor:pointer;padding:0}
 .hotspot:focus-visible{outline:2px solid #fff;outline-offset:2px;border-radius:12px}
 .hs-cta{left:4.8%;top:35.5%;width:38%;height:8%}
-.hs-intro{left:4.5%;top:50.2%;width:29.2%;height:15.6%}
-.hs-theory{left:35.7%;top:50.2%;width:28.8%;height:15.6%}
-.hs-editing{left:66.4%;top:50.2%;width:29%;height:15.6%}
-.hs-materials{left:4.5%;top:67.2%;width:43.7%;height:15.3%}
-.hs-extra{left:50.1%;top:67.2%;width:45.3%;height:15.3%}
-.nav-home{left:4.8%;top:94%;width:21%;height:4.2%}
-.nav-sections{left:28.5%;top:94%;width:19%;height:4.2%}
-.nav-materials{left:50.5%;top:94%;width:22%;height:4.2%}
-.nav-info{left:75%;top:94%;width:20%;height:4.2%}
+.hs-intro{left:4.5%;top:53.92%;width:29.2%;height:16.76%}
+.hs-theory{left:35.7%;top:53.92%;width:28.8%;height:16.76%}
+.hs-editing{left:66.4%;top:53.92%;width:29%;height:16.76%}
+.hs-materials{left:4.5%;top:72.18%;width:43.7%;height:16.43%}
+.hs-extra{left:50.1%;top:72.18%;width:45.3%;height:16.43%}
+
+
+
+
 
 .app-screen{
   position:fixed;inset:0;z-index:80;display:none;overflow:auto;
