@@ -3,146 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#000000">
-  <title>Логика монтажа — HATE YOUR PROD</title>
+  <meta name="theme-color" content="#050505">
+  <title>Логика монтажа — BILLIONAIRES CLUB</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-  <div class="exact-side-background" aria-hidden="true"></div>
-
-  <div class="loader-screen" id="loaderScreen" aria-hidden="false">
-    <div class="loader-glow loader-glow-a"></div>
-    <div class="loader-glow loader-glow-b"></div>
-
+  <div class="loader-screen" id="loaderScreen">
     <div class="loader-stage">
-      <div class="loader-logo loader-logo-hyp">
-        <img src="assets/loader-hate-your-prod.png" alt="HATE YOUR PROD">
-      </div>
-
-      <div class="liquid-bridge" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-
-      <div class="loader-logo loader-logo-bc">
-        <img src="assets/loader-billionaires-club.jpeg" alt="BILLIONAIRES CLUB">
-      </div>
-
-      <div class="loader-caption">
-        <span>HATE YOUR PROD</span>
-        <i></i>
-        <span>BILLIONAIRES CLUB</span>
-      </div>
+      <img class="loader-logo logo-hyp" src="assets/loader-hate-your-prod.png" alt="HATE YOUR PROD">
+      <img class="loader-logo logo-bc" src="assets/loader-billionaires-club.jpeg" alt="BILLIONAIRES CLUB">
+      <div class="loader-liquid"></div>
     </div>
   </div>
 
-  <main class="site-shell">
-    <div class="design-wrap" id="homeScreen">
-      <img src="assets/design.jpeg" alt="HATE YOUR PROD — Логика монтажа" class="design">
-      <button class="hotspot hs-telegram-link" onclick="window.open('https://t.me/+858ivcj3AYg3MmMy','_blank')" aria-label="Telegram чат"></button>
-      <button class="hotspot hs-instagram-link" id="openProfile" aria-label="Профиль"></button>
+  <div class="page-background" aria-hidden="true"></div>
 
+  <main class="course-page">
+    <section class="hero" id="top">
+      <img src="assets/long-page-hero.jpeg" alt="Логика монтажа">
+      <a class="hero-link telegram-link" href="https://t.me/+858ivcj3AYg3MmMy" target="_blank" rel="noopener" aria-label="Чат курса"></a>
+      <a class="hero-link instagram-link" href="https://instagram.com/hate.your.prod" target="_blank" rel="noopener" aria-label="Instagram"></a>
+      <a class="hero-link start-link" href="#intro" aria-label="Начать курс"></a>
+    </section>
 
-      <button class="hotspot hs-cta" data-section="intro" aria-label="Я монтирую — ты смотришь"></button>
-      <button class="hotspot hs-intro" data-section="intro" aria-label="Интро"></button>
-      <button class="hotspot hs-theory" data-section="theory" aria-label="Теория"></button>
-      <button class="hotspot hs-editing" data-section="editing" aria-label="Монтаж"></button>
-      <button class="hotspot hs-materials" data-section="materials" aria-label="Материалы к курсу"></button>
-      <button class="hotspot hs-extra" data-section="extra" aria-label="Дополнительные материалы"></button>
-    </div>
-  </main>
+    <nav class="sticky-nav" aria-label="Навигация по курсу">
+      <a href="#intro">Интро</a>
+      <a href="#theory">Теория</a>
+      <a href="#editing">Монтаж</a>
+      <a href="#materials">Материалы</a>
+    </nav>
 
-  <section class="app-screen" id="sectionScreen" aria-hidden="true">
-    <header class="app-header">
-      <button class="round-btn" id="backHome">←</button>
-      <div>
-        <span id="sectionKicker">РАЗДЕЛ</span>
-        <strong id="sectionTitle">ИНТРО</strong>
+    <section class="course-section" id="intro">
+      <div class="section-heading">
+        <span>01</span>
+        <div>
+          <small>РАЗДЕЛ</small>
+          <h2>ИНТРО</h2>
+        </div>
       </div>
-    </header>
-    <div class="app-content">
-      <div class="section-hero reveal">
-        <div class="section-index" id="sectionIndex">01</div>
-        <h1 id="sectionHeading">ИНТРО</h1>
-        <p id="sectionDescription"></p>
 
-        <div class="section-progress" id="sectionProgress">
-          <div class="progress-copy">
-            <span>ПРОГРЕСС РАЗДЕЛА</span>
-            <strong id="sectionProgressText">0 из 0</strong>
+      <article class="lesson-card" data-lesson-id="intro-1">
+        <div class="lesson-head">
+          <span>01</span>
+          <div>
+            <small>УРОК</small>
+            <h3>Вступление</h3>
           </div>
-          <div class="progress-track"><i id="sectionProgressBar"></i></div>
+          <button class="complete-btn" type="button">✓ Пройдено</button>
+        </div>
+        <div class="video-shell" data-video="https://kinescope.io/wSPsWT8KkzqfvpnTP6TzaY/plhDoayj">
+          <button class="video-poster" type="button">
+            <span class="play-icon">▶</span>
+            <strong>Смотреть видео</strong>
+            <small>Видео загрузится после нажатия</small>
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <section class="course-section" id="theory">
+      <div class="section-heading">
+        <span>02</span>
+        <div>
+          <small>РАЗДЕЛ</small>
+          <h2>ТЕОРИЯ</h2>
         </div>
       </div>
 
-      <label class="lesson-search reveal">
-        <span>⌕</span>
-        <input id="lessonSearch" type="search" placeholder="Найти урок" autocomplete="off">
-      </label>
-
-      <div class="lesson-list reveal" id="lessonList"></div>
-    </div>
-  </section>
-
-  <section class="app-screen" id="lessonScreen" aria-hidden="true">
-    <header class="app-header">
-      <button class="round-btn" id="backSection">←</button>
-      <div>
-        <span id="lessonSectionLabel">РАЗДЕЛ</span>
-        <strong id="lessonHeaderTitle">УРОК</strong>
-      </div>
-    </header>
-
-    <div class="lesson-page">
-      <div class="video-frame">
-        <div class="video-loader" id="videoLoader">
-          <span></span>
-          <small>ЗАГРУЗКА ВИДЕО</small>
+      <article class="lesson-card" data-lesson-id="theory-1">
+        <div class="lesson-head">
+          <span>01</span>
+          <div>
+            <small>УРОК</small>
+            <h3>Теория</h3>
+          </div>
+          <button class="complete-btn" type="button">✓ Пройдено</button>
         </div>
-        <iframe id="lessonVideo" src="" title="Видео урока"
-          loading="lazy"
-          allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
-          allowfullscreen></iframe>
+        <div class="video-shell" data-video="https://kinescope.io/uvgNYjcjs6w27qpgYTdw7j/plIizIPE">
+          <button class="video-poster" type="button"><span class="play-icon">▶</span><strong>Смотреть видео</strong><small>Видео загрузится после нажатия</small></button>
+        </div>
+      </article>
+
+      <article class="lesson-card" data-lesson-id="theory-2">
+        <div class="lesson-head">
+          <span>02</span>
+          <div>
+            <small>УРОК</small>
+            <h3>Теория съёмка</h3>
+          </div>
+          <button class="complete-btn" type="button">✓ Пройдено</button>
+        </div>
+        <div class="video-shell" data-video="https://kinescope.io/cuE1YDPKnBaS2KAhwHKWF8/plB9txaf">
+          <button class="video-poster" type="button"><span class="play-icon">▶</span><strong>Смотреть видео</strong><small>Видео загрузится после нажатия</small></button>
+        </div>
+      </article>
+    </section>
+
+    <section class="course-section" id="editing">
+      <div class="section-heading">
+        <span>03</span>
+        <div>
+          <small>РАЗДЕЛ</small>
+          <h2>МОНТАЖ</h2>
+        </div>
       </div>
 
-      <div class="lesson-meta">
-        <span class="lesson-kicker" id="lessonKicker">УРОК 01</span>
-        <h1 id="lessonTitle">Название урока</h1>
-        <p id="lessonDescription">Видео курса «Логика монтажа».</p>
-        <button id="completeLesson" class="complete-lesson" type="button">
-          <span class="complete-icon">✓</span>
-          <span class="complete-label">ОТМЕТИТЬ ПРОЙДЕННЫМ</span>
-        </button>
+      <article class="lesson-card" data-lesson-id="edit-1">
+        <div class="lesson-head"><span>01</span><div><small>УРОК</small><h3>База. Отбор кадров.</h3></div><button class="complete-btn" type="button">✓ Пройдено</button></div>
+        <div class="video-shell" data-video="https://kinescope.io/wPpgvn5qyc43cWcjQV8B5b/plRKqpMX"><button class="video-poster" type="button"><span class="play-icon">▶</span><strong>Смотреть видео</strong><small>Видео загрузится после нажатия</small></button></div>
+      </article>
+
+      <article class="lesson-card" data-lesson-id="edit-2">
+        <div class="lesson-head"><span>02</span><div><small>УРОК</small><h3>Отбор кадров #2</h3></div><button class="complete-btn" type="button">✓ Пройдено</button></div>
+        <div class="video-shell" data-video="https://kinescope.io/rUzmw3Fv1nxBoJptqWCN2v"><button class="video-poster" type="button"><span class="play-icon">▶</span><strong>Смотреть видео</strong><small>Видео загрузится после нажатия</small></button></div>
+      </article>
+
+      <article class="lesson-card" data-lesson-id="edit-3">
+        <div class="lesson-head"><span>03</span><div><small>УРОК</small><h3>Сборка интро</h3></div><button class="complete-btn" type="button">✓ Пройдено</button></div>
+        <div class="video-shell" data-video="https://kinescope.io/ck3Y39GuT96EGM275Ktn2w/pll1GDzJ"><button class="video-poster" type="button"><span class="play-icon">▶</span><strong>Смотреть видео</strong><small>Видео загрузится после нажатия</small></button></div>
+      </article>
+
+      <article class="lesson-card" data-lesson-id="edit-4">
+        <div class="lesson-head"><span>04</span><div><small>УРОК</small><h3>Чистовой монтаж</h3></div><button class="complete-btn" type="button">✓ Пройдено</button></div>
+        <div class="video-shell" data-video="https://kinescope.io/cjKA6C6gSt1wWkK88ugiDh/plwmkiOU"><button class="video-poster" type="button"><span class="play-icon">▶</span><strong>Смотреть видео</strong><small>Видео загрузится после нажатия</small></button></div>
+      </article>
+
+      <article class="lesson-card" data-lesson-id="edit-5">
+        <div class="lesson-head"><span>05</span><div><small>УРОК</small><h3>Цвет финал</h3></div><button class="complete-btn" type="button">✓ Пройдено</button></div>
+        <div class="video-shell" data-video="https://kinescope.io/0mGtC6yxEe3jBigTRkmHjq/pl6pbouI"><button class="video-poster" type="button"><span class="play-icon">▶</span><strong>Смотреть видео</strong><small>Видео загрузится после нажатия</small></button></div>
+      </article>
+    </section>
+
+    <section class="course-section" id="materials">
+      <div class="section-heading">
+        <span>04</span>
+        <div>
+          <small>РАЗДЕЛ</small>
+          <h2>МАТЕРИАЛЫ</h2>
+        </div>
       </div>
-
-      <div class="lesson-navigation">
-        <button id="prevLesson">← ПРЕДЫДУЩИЙ</button>
-        <button id="nextLesson">СЛЕДУЮЩИЙ →</button>
+      <div class="materials-grid">
+        <div class="material-card"><span>01</span><strong>Материалы к курсу</strong><small>Ссылки добавим позже</small></div>
+        <div class="material-card"><span>02</span><strong>Дополнительные материалы</strong><small>Ссылки добавим позже</small></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <aside class="profile-panel" id="profilePanel" aria-hidden="true">
-    <button class="profile-close" id="closeProfile" aria-label="Закрыть">×</button>
-    <span class="profile-kicker">BILLIONAIRES CLUB</span>
-    <h2>ЛОГИКА МОНТАЖА</h2>
-    <div class="overall-progress">
-      <div><span>ОБЩИЙ ПРОГРЕСС</span><strong id="overallProgressText">0%</strong></div>
-      <div class="progress-track"><i id="overallProgressBar"></i></div>
-    </div>
-    <a href="https://instagram.com/hate.your.prod" target="_blank" rel="noopener">Instagram <span>↗</span></a>
-    <a href="https://t.me/+858ivcj3AYg3MmMy" target="_blank" rel="noopener">Чат курса <span>↗</span></a>
-  </aside>
-  <div class="profile-backdrop" id="profileBackdrop"></div>
-
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal-card">
-      <button class="close" id="close">×</button>
-      <div class="kicker" id="kicker">РАЗДЕЛ</div>
-      <h2 id="title">Название</h2>
-      <p id="text"></p>
-    </div>
-  </div>
+    <footer class="course-footer">
+      <p>МОНТАЖ — ЭТО НЕ ПРО КНОПКИ</p>
+      <a href="#top">Наверх ↑</a>
+    </footer>
+  </main>
 
   <script src="app.js"></script>
 </body>
