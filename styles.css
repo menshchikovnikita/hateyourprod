@@ -348,3 +348,97 @@ body{min-height:100vh}
 @media(prefers-reduced-motion:reduce){
   .loader-screen{display:none}
 }
+
+/* Replace the baked HATEYOURPROD mark with a liquid-metal BILLIONAIRES CLUB wordmark */
+.top-brand-replacement{
+  position:absolute;
+  z-index:20;
+  left:4.4%;
+  top:1.25%;
+  width:30%;
+  min-height:5.6%;
+  display:flex;
+  align-items:center;
+  gap:.42em;
+  padding:.55em .8em .5em;
+  background:#000;
+  overflow:visible;
+  line-height:.88;
+  pointer-events:none;
+}
+.top-brand-replacement:before{
+  content:"";
+  position:absolute;
+  inset:-12% -3%;
+  background:#000;
+  z-index:-2;
+}
+.top-brand-replacement:after{
+  content:"";
+  position:absolute;
+  left:7%;
+  right:8%;
+  bottom:-10%;
+  height:24%;
+  border-radius:50%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent);
+  filter:blur(8px);
+  opacity:.22;
+  z-index:-1;
+}
+.brand-main,
+.brand-sub{
+  position:relative;
+  display:inline-block;
+  font-family:Arial Black,Arial,Helvetica,sans-serif;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.025em;
+  background:
+    linear-gradient(150deg,
+      #fdfdfd 0%,
+      #77797e 17%,
+      #ffffff 34%,
+      #4f5055 53%,
+      #f3f3f3 72%,
+      #77797d 86%,
+      #ffffff 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:
+    drop-shadow(0 0 2px rgba(255,255,255,.7))
+    drop-shadow(0 0 8px rgba(255,255,255,.16));
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.6),
+    0 3px 6px rgba(0,0,0,.9);
+}
+.brand-main{font-size:clamp(9px,1.58vw,18px)}
+.brand-sub{
+  font-size:clamp(8px,1.33vw,15px);
+  letter-spacing:.08em;
+}
+.brand-main:after,
+.brand-sub:after{
+  content:"";
+  position:absolute;
+  width:.16em;
+  height:.48em;
+  background:linear-gradient(#f9f9f9,#65666b);
+  border-radius:50% 50% 70% 70%;
+  bottom:-.30em;
+  box-shadow:0 0 5px rgba(255,255,255,.35);
+}
+.brand-main:after{left:31%}
+.brand-sub:after{right:14%;height:.36em}
+@media(max-width:560px){
+  .top-brand-replacement{
+    left:4.1%;
+    top:1.08%;
+    width:34%;
+    gap:.28em;
+    padding:.48em .55em .45em;
+  }
+  .brand-main{font-size:clamp(8px,2.65vw,13px)}
+  .brand-sub{font-size:clamp(7px,2.2vw,11px)}
+}
