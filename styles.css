@@ -349,32 +349,60 @@ body{min-height:100vh}
   .loader-screen{display:none}
 }
 
-.desktop-background-real{display:none}
 
-@media (min-width:1025px){
-  html,body{
-    min-height:100%;
-    background:#000;
+/* Полноэкранный фон без изменения центрального интерфейса */
+html, body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: #000;
+}
+
+.site-shell {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  background: #000;
+}
+
+.full-page-background {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 50%;
+  width: max(100vw, 1024px);
+  height: 100%;
+  min-height: 100vh;
+  transform: translateX(-50%);
+  object-fit: cover;
+  object-position: center top;
+  pointer-events: none;
+  user-select: none;
+}
+
+.design-wrap {
+  position: relative;
+  z-index: 2;
+  width: min(100vw, 1024px);
+  flex: 0 0 auto;
+}
+
+/* На телефоне края широкого фона автоматически обрезаются,
+   а сам интерфейс остаётся прежним. */
+@media (max-width: 1024px) {
+  .full-page-background {
+    width: 1920px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: center top;
   }
 
-  .desktop-background-real{
-    display:block;
-    position:fixed;
-    inset:0;
-    z-index:0;
-    background:
-      #000 url("assets/desktop-background.jpeg") center top / 100% auto no-repeat;
-  }
-
-  .site-shell{
-    position:relative;
-    z-index:2;
-    background:transparent !important;
-  }
-
-  .design-wrap{
-    box-shadow:
-      -22px 0 36px rgba(0,0,0,.30),
-      22px 0 36px rgba(0,0,0,.30);
+  .design-wrap {
+    width: 100vw;
   }
 }
